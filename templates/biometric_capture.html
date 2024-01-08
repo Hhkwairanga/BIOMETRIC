@@ -1,0 +1,28 @@
+<!-- biometric_capture.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Biometric Capture - NDIC Enrolment System</title>
+</head>
+
+<body>
+    <div class="background-logo"></div>
+    <div class="content">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/top_left_logo.png') }}" alt="NDIC Logo" class="logo">
+            <h1>Biometric Capture</h1>
+        </div>
+    </div>
+
+    <!-- Add your face and fingerprint capture elements here -->
+
+    <form action="{{ url_for('submit_biometric_capture') }}" method="post" class="enrollment-form">
+        <input type="submit" value="Complete Enrollment">
+    </form>
+</body>
+
+</html>

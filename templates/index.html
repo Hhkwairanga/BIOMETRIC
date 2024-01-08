@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/top_left_logo.png') }}" type="image/png">
+    <title>NDIC Copers/IT Enrolment System</title>
+</head>
+<body>
+    <div class="background-logo"></div>
+    <div class="content">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/top_left_logo.png') }}" alt="NDIC Logo" class="logo">
+            <h1>NDIC Corpers/IT Enrollment System</h1>
+        </div>
+    </div>
+
+    <form action="{{ url_for('enroll') }}" method="post" class="enrollment-form1">
+        <label for="user_type">Are you a Corper or an IT Student?</label>
+        <div class="radio-group">
+            <input type="radio" id="corper" name="user_type" value="corper" required>
+            <label for="corper">Corper</label>
+            <input type="radio" id="it_student" name="user_type" value="it_student" required>
+            <label for="it_student">IT Student</label>
+        </div>
+
+        <input type="submit" value="Enroll">
+    </form>
+</body>
+
+</html>

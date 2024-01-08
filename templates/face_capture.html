@@ -1,0 +1,24 @@
+<!-- face_capture.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='capture.js') }}"></script>
+    <title>Face Capture - NDIC Enrolment System</title>
+</head>
+<body>
+    <div class="background-logo"></div>
+    <div class="content">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/top_left_logo.png') }}" alt="NDIC Logo" class="logo">
+            <h1>Face Capture</h1>
+        </div>
+    </div>
+    <div id="faceCapture" class="biometric-capture">
+        <video id="video" width="640" height="480" autoplay></video>
+        <button id="captureBtn">Capture Face</button>
+    </div>
+</body>
+</html>
